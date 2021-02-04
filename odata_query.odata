@@ -1,0 +1,26 @@
+# Outputs list of available options
+let
+    Source = OData.Feed ("https://analytics.dev.azure.com/{org}/{project}/_odata/v3.0-preview/"
+    ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
+   in
+    Source
+# -----------------------------------------------------------------------------------------------------------
+
+# Outputs list of pipelines in the org/project specified
+let
+   Source = OData.Feed ("https://analytics.dev.azure.com/{org}/{project}/_odata/v3.0-preview/Pipelines"
+   ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
+  in
+   Source
+
+# Example
+# org = Malauzai
+# project = Maluazai
+
+# -----------------------------------------------------------------------------------------------------------
+# Example Query:
+# let
+#   Source = OData.Feed ("https://analytics.dev.azure.com/Malauzai/Malauzai/_odata/v3.0-preview/Pipelines"
+#   ,null, [Implementation="2.0",OmitValues = ODataOmitValues.Nulls,ODataVersion = 4])
+#  in
+#   Source
