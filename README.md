@@ -1,4 +1,4 @@
-# PowerBI  Azure Devops OData Configuration
+# PowerBI + Azure DevOps OData Configuration
 An OData query is used to connect to Azure DevOps using PowerBI to retrieve different metrics
 
 Sensitive File: It will not open if you dont have the access to this:
